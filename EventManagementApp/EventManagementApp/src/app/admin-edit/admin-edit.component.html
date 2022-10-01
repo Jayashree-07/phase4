@@ -1,0 +1,23 @@
+<div class="qq">
+<div class="ccc">
+    <h2 style="color:blue;text-shadow: 0 0 3px #00e1ff, 0 0 5px #e6e6f1;">{{empformlabel}}</h2>  
+    <form [formGroup]="editForm" novalidate class="form" style="margin: auto; padding-top: 5px; padding-bottom: 10px;width: 400px;">  
+      <div class="form-group" style=" padding: 12px 20px;">  
+        <label for="email">Admin Email:</label>  
+        <input formControlName="email" placeholder="Email" name="email" class="form-control" id="email">  
+         
+      </div>  
+      <div class="form-group" style=" padding: 12px 20px;">  
+        <label for="password"> New Password:</label>  
+        <input formControlName="password" placeholder="Password" name="password" class="form-control">  
+         
+      </div>   
+      <div class="form-group" style=" padding: 12px 20px;">  
+        <label for="password">Confirm Password:</label>  
+        <input formControlName="password" placeholder="Password" name="password" class="form-control" id="password">  
+         
+      </div>  
+       <button class="btn btn-success" [disabled]='editForm.invalid'  (click)="onUpdate()">UPDATE</button>  
+      <p>Form value: {{ editForm.value | json }}</p>  
+    </form>  
+  </div>  </div>
